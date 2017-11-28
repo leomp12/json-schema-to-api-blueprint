@@ -13,12 +13,34 @@ function strX (str, json, spaces) {
       let description = x[prop].description
       switch (type) {
         case 'integer':
+        case 'number':
           type = 'number'
+          if (x[prop].hasOwnProperty('min')) {
+            description += ' - Mininum: **' + x[prop].min + '**'
+          }
+          if (x[prop].hasOwnProperty('max')) {
+            description += ' - Maximum: **' + x[prop].max + '**'
+          }
+          if (x[prop].hasOwnProperty('multipleOf')) {
+            description += ' - Max precision: **' + x[prop].multipleOf + '**'
+          }
           break
 
         case 'string':
           if (x[prop].hasOwnProperty('enum')) {
             type = 'enum'
+          } else {
+            if (x[prop].hasOwnProperty('minLength')) {
+              description += ' - Min length: **' + x[prop].minLength + '**'
+            }
+            if (x[prop].hasOwnProperty('maxLength')) {
+              description += ' - Max length: **' + x[prop].maxLength + '**'
+            }
+            if (x[prop].hasOwnProperty('format')) {
+              description += ' - Format: **' + x[prop].format + '**'
+            } else if (x[prop].hasOwnProperty('pattern')) {
+              description += ' - RegEx pattern: **' + x[prop].pattern + '**'
+            }
           }
           break
 
