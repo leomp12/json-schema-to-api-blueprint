@@ -1,4 +1,3 @@
-let json = {}
 let str = ''
 
 function strX (str, json, spaces) {
@@ -40,7 +39,11 @@ function strX (str, json, spaces) {
           break
       }
 
-      str += spaces + '+ `' + prop + '` (' + type
+      str += spaces + '+ `' + prop + '`'
+      if (x[prop].hasOwnProperty('default')) {
+        str += ': ' + x[prop].default
+      }
+      str += ' (' + type
       if (Array.isArray(req)) {
         for (let i = 0; i < req.length; i++) {
           if (prop === req[i]) {
