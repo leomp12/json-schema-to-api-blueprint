@@ -46,19 +46,19 @@ function strX (str, json, spaces) {
 
         case 'array':
           if (x[prop].hasOwnProperty('minItems')) {
-            description += ' - Min number of elements: **' + x[prop].minItems + '**'
+            description += ' - Min elements: **' + x[prop].minItems + '**'
           }
           if (x[prop].hasOwnProperty('maxItems')) {
-            description += ' - Max number of elements: **' + x[prop].maxItems + '**'
+            description += ' - Max elements: **' + x[prop].maxItems + '**'
           }
           break
 
         case 'object':
           if (x[prop].hasOwnProperty('minProperties')) {
-            description += ' - Min number of properties: **' + x[prop].minProperties + '**'
+            description += ' - Min properties: **' + x[prop].minProperties + '**'
           }
           if (x[prop].hasOwnProperty('maxProperties')) {
-            description += ' - Max number of properties: **' + x[prop].maxProperties + '**'
+            description += ' - Max properties: **' + x[prop].maxProperties + '**'
           }
           break
       }
