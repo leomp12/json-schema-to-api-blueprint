@@ -1,4 +1,4 @@
 # json-schema-to-api-blueprint
 JS to convert JSON Schema to API Blueprint (Apiary) Attributes
 
-[JSFiddle](https://jsfiddle.net/vwfpqbnr/5/)
+[JSFiddle](https://jsfiddle.net/vwfpqbnr/6/)
