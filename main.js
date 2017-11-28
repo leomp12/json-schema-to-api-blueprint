@@ -1,3 +1,5 @@
+let json = {}
+
 let str = ''
 
 function strX (str, json, spaces) {
