@@ -16,10 +16,10 @@ function strX (str, json, spaces) {
         case 'number':
           type = 'number'
           if (x[prop].hasOwnProperty('minimum')) {
-            description += ' - Mininum: **' + x[prop].min + '**'
+            description += ' - Mininum: **' + x[prop].minimum + '**'
           }
           if (x[prop].hasOwnProperty('maximum')) {
-            description += ' - Maximum: **' + x[prop].max + '**'
+            description += ' - Maximum: **' + x[prop].maximum + '**'
           }
           if (x[prop].hasOwnProperty('multipleOf')) {
             description += ' - Max precision: **' + x[prop].multipleOf + '**'
