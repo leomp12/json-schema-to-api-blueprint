@@ -38,8 +38,7 @@ function strX (str, json, spaces) {
             }
             if (x[prop].hasOwnProperty('format')) {
               description += ' - Format: **' + x[prop].format + '**'
-            }
-            if (x[prop].hasOwnProperty('pattern')) {
+            } else if (x[prop].hasOwnProperty('pattern')) {
               description += ' - RegEx pattern: **`' + x[prop].pattern + '`**'
             }
           }
