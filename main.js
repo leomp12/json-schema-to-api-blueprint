@@ -10,6 +10,9 @@ function strX (str, json, spaces) {
   for (let prop in x) {
     if (x.hasOwnProperty(prop)) {
       let type = x[prop].type
+      if (Array.isArray(type)) {
+        type = type[0]
+      }
       let description = x[prop].description
       switch (type) {
         case 'integer':
