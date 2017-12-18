@@ -2,6 +2,10 @@ let json = {}
 
 let str = ''
 
+function escapeStr (str) {
+  return str.replace('+', '`+`')
+}
+
 function strX (str, json, spaces) {
   let x = {}
   Object.assign(x, json.properties, json.patternProperties)
@@ -13,7 +17,7 @@ function strX (str, json, spaces) {
       if (Array.isArray(type)) {
         type = type[0]
       }
-      let description = x[prop].description
+      let description = escapeStr(x[prop].description)
       switch (type) {
         case 'integer':
         case 'number':
@@ -106,7 +110,7 @@ function strX (str, json, spaces) {
               }
               break
           }
-          str += spaces + '    + (' + items.type + ') - ' + items.description + '\n'
+          str += spaces + '    + (' + items.type + ') - ' + escapeStr(items.description) + '\n'
 
           switch (items.type) {
             case 'enum':
