@@ -84,7 +84,7 @@ function strX (str, json, spaces) {
       switch (type) {
         case 'enum':
           for (let i = 0; i < x[prop].enum.length; i++) {
-            str += spaces + '    + ' + x[prop].enum[i] + ' (string)\n'
+            str += spaces + '    + `' + x[prop].enum[i] + '` (string)\n'
           }
           break
 
@@ -111,7 +111,7 @@ function strX (str, json, spaces) {
           switch (items.type) {
             case 'enum':
               for (let i = 0; i < items.enum.length; i++) {
-                str += spaces + '        + ' + items.enum[i] + ' (string)\n'
+                str += spaces + '        + `' + items.enum[i] + '` (string)\n'
               }
               break
 
