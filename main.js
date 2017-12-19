@@ -3,7 +3,7 @@ let json = {}
 let str = ''
 
 function escapeStr (str) {
-  return str.replace(/([^\s,]+_[^\s,]+)/i, '`$1`').replace('+', '`+`')
+  return str.replace(/(([^\s,]+)?(_|\+)([^\s,]+)?)/i, '`$1`')
 }
 
 function strX (str, json, spaces) {
