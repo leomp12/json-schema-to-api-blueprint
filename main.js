@@ -4,7 +4,7 @@ let str = ''
 
 function escapeStr (str) {
   if (str !== undefined) {
-    return str.replace(/(([\w-]+)?(_|\+)([\w-]+)?)/g, '`$1`')
+    return str.replace(/(([\w-]+)?(_|\+|\*)([\w-]+)?)/g, '`$1`')
   } else {
     return ''
   }
