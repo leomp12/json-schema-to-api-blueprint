@@ -109,7 +109,7 @@ function strX (str, json, spaces) {
               break
 
             case 'string':
-              if (items.type.hasOwnProperty('enum')) {
+              if (items.hasOwnProperty('enum')) {
                 items.type = 'enum'
               }
               break
